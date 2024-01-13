@@ -97,20 +97,20 @@ const Languages = ({item}) => {
  
 
   return (
-    < div style={{  marginBottom:'100px',marginTop:'100px' ,display: 'flex', flexDirection: 'column' }}>
+    < div style={{  marginBottom:'100px',marginTop:'100px' , width:'100vw',display: 'flex', flexDirection: 'column' }}>
     <h1 style={{marginLeft:'10px'}}>Languages :</h1>
     {/* <HiChevronLeft className='  hidden md:block text-white text-[30px] absolute scroll-smooth mx-8 mt-[80px] cursor-pointer  ' onClick={() => sliderLeft(elementRef.current)} style={{ color: '#fff' ,fontSize:'45px',fontStyle:'bold' }} />
         <HiChevronRight className=' hidden md:block  text-white text-[30px] absolute  scroll-smooth mx-8 mt-[80px] cursor-pointer right-0  ' onClick={() => sliderRight(elementRef.current)} style={{ color: '#fff',fontSize:'45px' ,fontStyle:'bold'}} />
   */}
-    <div style={{  width: '100vw', display: 'flex', flexDirection: 'column', overflowY: 'auto', maxHeight: '100vh' }}>
+    <div style={{  width: '100vw' }}>
    
-  <div className='flex gap-2 mt-10 md:gap-5 p-2 px-5 md:px-16 overflow-x-auto   scrollbar-none ' style={{ flexDirection: 'row' }}>
+  <div className='flex gap-2 mt-10 md:gap-5 p-2 px-5 md:px-16 overflow-x-auto   scrollbar-none '>
     {Languageslist.map((item) => (
       <div key={item.id} className='flex-shrink-0 border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer  shadow-xl shadow-black ' style={{ width: '250px' }}>
         <img src={item.image} alt={item.name} className='w-full z-[1]' style={{ height: '140px', width: '100%', borderRadius: '10px' }} />
         <video src={item.video} className='absolute top-0 z-0 opacity-0 hover:opacity-50 transition-all duration-300 ease-in-out' autoPlay loop playsInline style={{ height: '140px', width: '100%', borderRadius: '10px' }} 
-        // onMouseOver={handleHover}
-        // onMouseLeave={handleLeave}
+        onMouseOver={handleHover}
+        onMouseLeave={handleLeave}
         onClick={handleHover}
         />
       </div>
