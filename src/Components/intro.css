@@ -1,0 +1,41 @@
+@media screen and (max-width: 768px) {
+    .ml-10 {
+      margin-left: 0;
+    }
+  
+    .flex-1 {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .profileImage {
+      margin-left: 0;
+    }
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .profileImage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+    border: 15px solid transparent;
+    background: linear-gradient(45deg, #008000, #00008b); /* Green to Dark Blue */
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s infinite; /* Adjust the duration as needed */
+  }
+    
