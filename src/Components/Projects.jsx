@@ -63,24 +63,34 @@ const Projects = () => {
   };
 
   return (
-    <div style={{marginBottom:'100px',marginTop:'100px'}}>
+    <div style={{marginBottom:'100px',marginTop:'100px' , width:'100vw',display: 'flex', flexDirection: 'column'}}>
        <h1 style={{marginLeft:'10px'}}>Projects :</h1>
-       <HiChevronLeft className='  hidden md:block text-white text-[30px] absolute scroll-smooth mx-8 mt-[80px] cursor-pointer  ' onClick={() => sliderLeft(elementRef.current)} style={{ color: '#fff' ,fontSize:'45px',fontStyle:'bold' }} />
-        <HiChevronRight className=' hidden md:block  text-white text-[30px] absolute  scroll-smooth mx-8 mt-[80px] cursor-pointer right-0  ' onClick={() => sliderRight(elementRef.current)} style={{ color: '#fff',fontSize:'45px' ,fontStyle:'bold'}} />
+       <HiChevronLeft className='  hidden md:block text-white text-[30px] absolute scroll-smooth mx-8 mt-[150px] cursor-pointer  ' onClick={() => sliderLeft(elementRef.current)} style={{ color: 'yellowgreen' ,fontSize:'45px',fontStyle:'bold' }} />
+        <HiChevronRight className=' hidden md:block  text-white text-[30px] absolute  scroll-smooth mx-8 mt-[150px] cursor-pointer right-0  ' onClick={() => sliderRight(elementRef.current)} style={{ color: 'yellowgreen',fontSize:'45px' ,fontStyle:'bold'}} />
      
-    <div ref={elementRef}    className=" overflow-x-auto scrollbar-none  pt-5 px-3 pb-5  ">
+    <div ref={elementRef}  style={{ width: '100vw', display: 'flex', flexDirection: 'column', overflowY: 'auto', maxHeight: '100vh' }}   className=" overflow-x-auto  scrollbar-none  pt-5 px-3 pb-5  ">
         
     <div className="w-[110px] md:w-[270px]  h-140px md:h-[150px] flex gap-8   "   > 
-       <img src={spiv} alt="Image" onClick={handleImageSpivClick} className="rounded  hover:border-[3px] border-gray-400  hover:scale-110 transition-all duration-150 ease-in   " />
-       <img src={libmanagement} alt="Image" onClick={handleImageLibClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in   "  />
-       <img src={carrental} alt="Image" onClick={handleImageCarrentalClick}  className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-       <img src={medassist} alt="Image" onClick={handleImagemedassistClick}  className="rounded  hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-       <img src={mailsystem} alt="Image" onClick={handleImagemailsystemClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-       <img src={qrgen} alt="Image" onClick={handleImageqrgenClick}  className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-       <img src={ytclone} alt="Image" onClick={handleImageytcloneClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-        <img src={djmessage} alt="Image" onClick={handleImagedjmessageClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-       <img src={djfood} alt="Image" onClick={handleImagedjfoodClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />    
-       <img src={houserental}  alt="Image" onClick={handleImagehouserentalClick} className="roundedhover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />  
+    <div>Space Invaders</div>
+   <img src={spiv} alt="Image" onClick={handleImageSpivClick} className="rounded  hover:border-[3px] border-gray-400  hover:scale-110 transition-all duration-150 ease-in   " />
+   <div>Library management</div>
+   <img src={libmanagement} alt="Image" onClick={handleImageLibClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in   "  />
+   <div>Car rental </div>
+   <img src={carrental} alt="Image" onClick={handleImageCarrentalClick}  className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+   <div>MedAssist</div>
+   <img src={medassist} alt="Image" onClick={handleImagemedassistClick}  className="rounded  hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+   <div>Mail System</div>
+   <img src={mailsystem} alt="Image" onClick={handleImagemailsystemClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+   <div>QR Code Generator</div>
+   <img src={qrgen} alt="Image" onClick={handleImageqrgenClick}  className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+   <div>Youtube Clone</div>
+   <img src={ytclone} alt="Image" onClick={handleImageytcloneClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+   <div>DjMessageApp</div>
+    <img src={djmessage} alt="Image" onClick={handleImagedjmessageClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+    <div>Django Food form</div>
+   <img src={djfood} alt="Image" onClick={handleImagedjfoodClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />  
+   <div>House Rental</div>  
+   <img src={houserental}  alt="Image" onClick={handleImagehouserentalClick} className="roundedhover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />  
 
     </div>
     </div>
