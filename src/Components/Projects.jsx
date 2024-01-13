@@ -72,15 +72,25 @@ const Projects = () => {
         
     <div className="w-[110px] md:w-[270px]  h-140px md:h-[150px] flex gap-8   "   > 
        <img src={spiv} alt="Image" onClick={handleImageSpivClick} className="rounded  hover:border-[3px] border-gray-400  hover:scale-110 transition-all duration-150 ease-in   " />
+       <div className="text-center">Space Invaders</div>
        <img src={libmanagement} alt="Image" onClick={handleImageLibClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in   "  />
+       <div className="text-center">Library Mangement</div>
        <img src={carrental} alt="Image" onClick={handleImageCarrentalClick}  className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+       <div className="text-center">Car rental</div>
        <img src={medassist} alt="Image" onClick={handleImagemedassistClick}  className="rounded  hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+       <div className="text-center">Medical Assistance</div>
        <img src={mailsystem} alt="Image" onClick={handleImagemailsystemClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+       <div className="text-center">Auto mail</div>
        <img src={qrgen} alt="Image" onClick={handleImageqrgenClick}  className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+       <div className="text-center">Qr gnerator</div>
        <img src={ytclone} alt="Image" onClick={handleImageytcloneClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
+       <div className="text-center">Youtube Clone</div>
         <img src={djmessage} alt="Image" onClick={handleImagedjmessageClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />
-       <img src={djfood} alt="Image" onClick={handleImagedjfoodClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />    
+        <div className="text-center">Whatsapp message sender</div>
+       <img src={djfood} alt="Image" onClick={handleImagedjfoodClick} className="rounded hover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />   
+       <div className="text-center">Django Food</div> 
        <img src={houserental}  alt="Image" onClick={handleImagehouserentalClick} className="roundedhover:border-[3px] border-gray-400 border-gray-400  hover:scale-110 transition-all duration-150 ease-in " />  
+       <div className="text-center">House rental site</div>
 
     </div>
     </div>
