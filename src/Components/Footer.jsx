@@ -68,6 +68,7 @@ const Footer = () => {
       backgroundPosition: 'left',
       backgroundRepeat:'no-repeat',
       boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.5)', /* Add the black shadow */
+      width:'98vw',
 
       '@media (max-width: 768px)': {
         backgroundImage: 'none',

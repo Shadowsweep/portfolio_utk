@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState,useEffect } from 'react';
 import c from './../assets/images/clo.jpeg'
 import cpp from './../assets/images/cppl.jpeg'
 import python from './../assets/images/pythonl.jpeg'
@@ -24,7 +24,32 @@ const Languages = ({item}) => {
   const videoRef = useRef(null);
   const elementRef = useRef();
 
+  
+  const [isHovered, setIsHovered] = useState(false);
+
+  // const handleHover = () => {
+  //   setIsHovered(true);
+  // };
+
+  // const handleLeave = () => {
+  //   setIsHovered(false);
+  // };
+
+  // useEffect(() => {
+  //   const video = videoRef.current;
+
+  //   if (video) {
+  //     if (isHovered) {
+  //       video.play();
+  //     } else {
+  //       video.pause();
+  //     }
+  //   }
+  // }, [isHovered]);
+
+
   const handleHover = () => {
+    console.log("1")
     if (videoRef.current) {
       videoRef.current.play();
     }
@@ -33,7 +58,7 @@ const Languages = ({item}) => {
   const handleLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0;
+      // videoRef.current.currentTime = 0;
     }}
     const sliderRight = (element) => {
       element.scrollLeft+=1250
@@ -97,7 +122,7 @@ const Languages = ({item}) => {
  
 
   return (
-    < div style={{  marginBottom:'100px',marginTop:'100px' , width:'100vw',display: 'flex', flexDirection: 'column' }}>
+    < div style={{  marginBottom:'100px',marginTop:'100px' , width:'97vw',display: 'flex', flexDirection: 'column' }}>
     <h1 style={{marginLeft:'10px'}}>Languages :</h1>
     {/* <HiChevronLeft className='  hidden md:block text-white text-[30px] absolute scroll-smooth mx-8 mt-[80px] cursor-pointer  ' onClick={() => sliderLeft(elementRef.current)} style={{ color: '#fff' ,fontSize:'45px',fontStyle:'bold' }} />
         <HiChevronRight className=' hidden md:block  text-white text-[30px] absolute  scroll-smooth mx-8 mt-[80px] cursor-pointer right-0  ' onClick={() => sliderRight(elementRef.current)} style={{ color: '#fff',fontSize:'45px' ,fontStyle:'bold'}} />
@@ -108,10 +133,12 @@ const Languages = ({item}) => {
     {Languageslist.map((item) => (
       <div key={item.id} className='flex-shrink-0 border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer  shadow-xl shadow-black ' style={{ width: '250px' }}>
         <img src={item.image} alt={item.name} className='w-full z-[1]' style={{ height: '140px', width: '100%', borderRadius: '10px' }} />
-        <video src={item.video} className='absolute top-0 z-0 opacity-0 hover:opacity-50 transition-all duration-300 ease-in-out' autoPlay loop playsInline style={{ height: '140px', width: '100%', borderRadius: '10px' }} 
+        <video src={item.video} className='absolute top-0 z-0 opacity-0 hover:opacity-50 transition-all duration-300 ease-in-out'
+         autoPlay loop playsInline style={{ height: '140px', width: '100%', borderRadius: '10px' }} 
         onMouseOver={handleHover}
         onMouseLeave={handleLeave}
-        onClick={handleHover}
+        // onMous={handleHover}
+        ref={videoRef}
         />
       </div>
     ))}
