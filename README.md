@@ -33,7 +33,7 @@ Welcome to my React portfolio! This repository contains the code and assets for 
 2. Install dependencies:
 
    ```bash
-   cd your-portfolio
+   cd portfolio
    npm install
    ```
 
