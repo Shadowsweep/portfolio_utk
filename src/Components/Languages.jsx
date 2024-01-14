@@ -50,9 +50,9 @@ const Languages = ({item}) => {
 
   const handleHover = () => {
     console.log("1")
-   
+    // if (videoRef.current) {
       videoRef.current.play();
-    
+    // }
   };
 
   const handleLeave = () => {
@@ -131,15 +131,16 @@ const Languages = ({item}) => {
    
   <div className='flex gap-2 mt-10 md:gap-5 p-2 px-5 md:px-16 overflow-x-auto   scrollbar-none '>
     {Languageslist.map((item) => (
-      <div key={item.id} className='flex-shrink-0 border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer  shadow-xl shadow-black ' style={{ width: '250px' }}>
-        <img src={item.image} alt={item.name} className='w-full z-[1]' style={{ height: '140px', width: '100%', borderRadius: '10px' }} />
-        <video src={item.video} className='absolute top-0 z-0 opacity-0 hover:opacity-50 transition-all duration-300 ease-in-out'
+      <div  className='flex-shrink-0 border-[2px] border-gray-600 rounded-lg hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer  shadow-xl shadow-black ' style={{ width: '250px' }}>
+        <video src={item.video} className='absolute top-0 z-0 opacity-0 hover:opacity-50 '
          autoPlay loop playsInline style={{ height: '140px', width: '100%', borderRadius: '10px' }} 
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
         // onMous={handleHover}
         ref={videoRef}
         />
+        <img src={item.image} alt={item.name} className='w-full z-[1]' style={{ height: '140px', width: '100%', borderRadius: '10px' }} />
+        
       </div>
     ))}
   </div>
