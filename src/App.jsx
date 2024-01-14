@@ -8,9 +8,11 @@ import Intro from './Components/Intro'
 import Languages from './Components/Languages'
 import Projects from './Components/Projects'
 import Footer from './Components/Footer'
+import Confetti from 'react-dom-confetti';
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
     <>

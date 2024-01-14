@@ -50,9 +50,9 @@ const Languages = ({item}) => {
 
   const handleHover = () => {
     console.log("1")
-    if (videoRef.current) {
+   
       videoRef.current.play();
-    }
+    
   };
 
   const handleLeave = () => {
@@ -135,7 +135,7 @@ const Languages = ({item}) => {
         <img src={item.image} alt={item.name} className='w-full z-[1]' style={{ height: '140px', width: '100%', borderRadius: '10px' }} />
         <video src={item.video} className='absolute top-0 z-0 opacity-0 hover:opacity-50 transition-all duration-300 ease-in-out'
          autoPlay loop playsInline style={{ height: '140px', width: '100%', borderRadius: '10px' }} 
-        onMouseOver={handleHover}
+        onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
         // onMous={handleHover}
         ref={videoRef}
