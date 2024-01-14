@@ -19,8 +19,8 @@ Welcome to my React portfolio! This repository contains the code and assets for 
 - HTML5
 - CSS3
 - JavaScript
-- [React Router](https://reactrouter.com/) for navigation
-- [react-dom-confetti](https://www.npmjs.com/package/react-dom-confetti) for confetti animation (optional)
+- Tailwind css
+  
 
 ## Usage
 
