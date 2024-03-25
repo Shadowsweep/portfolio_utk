@@ -17,7 +17,7 @@ function Slider(){
       <div style={{width:'97vw'}}  >
         <HiChevronLeft className='  hidden md:block text-white text-[30px] absolute mx-8 mt-[150px] cursor-pointer  ' onClick={() => sliderLeft(elementRef.current)} style={{ color: 'yellowgreen' ,fontSize:'60px' }} />
         <HiChevronRight className=' hidden md:block  text-white text-[30px] absolute mx-8 mt-[150px] cursor-pointer right-0  ' onClick={() => sliderRight(elementRef.current)} style={{ color: 'yellowgreen',fontSize:'60px' }} />
-      <div  className='flex  overflow-x-auto w-full px-16  scrollbar-none  md:h-[310px] scroll-smooth transition-all duration-100  ease-in ' ref={elementRef} >
+      <div  className='flex  overflow-x-clip w-full px-16  scrollbar-none  md:h-[310px] scroll-smooth transition-all duration-100  ease-in ' ref={elementRef} >
         {imagePaths.map((imagePath, index) => (
           <img
             key={index}
